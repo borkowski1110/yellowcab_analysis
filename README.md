@@ -21,18 +21,32 @@ will consume up to 2.8 GB of Your RAM.
 ## Project structure
 Project tree is shown below:
 .
-├── README.md
+├── README.md 
+
 ├── src
+
 │   ├── models.py
+
 ├── ├── ├── drivetime_model.py
+
 │   ├── generators
+
 ├── ├── ├── drivetime_generator.py
+
 │   ├── toolkit
+
 ├── ├── ├── analysis_toolkit.py
+
 ├── ├── ├── etl_toolkit.py
+
 ├── report.pdf
+
 ├── yellowcab_data_domain_understanding.ipnyb
+
 ├── yellowcab_eda.ipynb
+
 ├── yellowcab_models.ipynb
+
 ├── environment.yml
+
 ├── requirements.txt

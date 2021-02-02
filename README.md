@@ -20,6 +20,7 @@ will consume up to 2.8 GB of Your RAM.
 
 ## Project structure
 Project tree is shown below:
+
 .
 ├── README.md 
 

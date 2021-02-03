@@ -104,7 +104,7 @@ def generate_drivetime_model(batch:pd.DataFrame,
             ps = params
         
         evals_result = {}
-        if incremental_learning and Path('/kaggle/working/xg_temp_model.model').is_file():
+        if incremental_learning and Path('stored_model/xg_temp_model.model').is_file():
             model = xgb.train(ps,
                               training_set,
                               ps['n_round'],
@@ -112,7 +112,7 @@ def generate_drivetime_model(batch:pd.DataFrame,
                               early_stopping_rounds = early_stopping_rounds,
                               evals_result = {},
                               verbose_eval = False,
-                              xgb_model = '/kaggle/working/xg_temp_model.model')
+                              xgb_model = '/stored_model/xg_temp_model.model')
         
         model = xgb.train(ps,
                           training_set,
@@ -123,7 +123,7 @@ def generate_drivetime_model(batch:pd.DataFrame,
                           verbose_eval = False)
         
         if incremental_learning:
-            model.save_model('/kaggle/working/xg_temp_model.model')
+            model.save_model('/stored_model/xg_temp_model.model')
             return model, evals_result
         
         return model, evals_result
